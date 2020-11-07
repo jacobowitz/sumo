@@ -762,7 +762,7 @@ MSNet::clearState(const SUMOTime step) {
     }
     myLogics->clearState();
     myDetectorControl->updateDetectors(myStep);
-    myDetectorControl->writeOutput(myStep, true);
+    //myDetectorControl->writeOutput(myStep, true);
     myDetectorControl->clearState();
     for (auto& item : myStoppingPlaces) {
         for (auto& item2 : item.second) {
@@ -920,7 +920,7 @@ MSNet::writeOutput() {
     }
 
     // write detector values
-    myDetectorControl->writeOutput(myStep + DELTA_T, false);
+    //myDetectorControl->writeOutput(myStep + DELTA_T, false);
 
     // write link states
     if (OptionsCont::getOptions().isSet("link-output")) {
